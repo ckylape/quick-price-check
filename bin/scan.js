@@ -91,7 +91,7 @@ async function main() {
         const db = await low(adapter)
         const items = await db.get('items').value()
         const browser = await puppeteer.launch({
-            headless: false
+            headless: true
         })
 
         // loop through items
