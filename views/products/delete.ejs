@@ -1,0 +1,16 @@
+<% layout('../layouts/html') -%>
+
+<div class="row">
+  <form class="col s12" method="post" action="/products/delete">
+    <p>Are you sure you want to delete <strong><%= item.name %></strong>? This action cannot be undone.</p>
+    <input type="hidden" value="<%= item.id %>" name="id" />
+    <input type="hidden" value="<%= item.name %>" name="name" />
+    <br>
+    <a class="left btn waves-effect waves-light teal" href="/">Cancel
+      <i class="material-icons left">block</i>
+    </a>
+    <button class="right btn waves-effect waves-light red" type="submit">Confirm
+      <i class="material-icons left">delete</i>
+    </button>
+  </form>
+</div>

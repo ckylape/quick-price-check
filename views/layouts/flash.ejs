@@ -1,0 +1,26 @@
+<%if (messages.info) { %>
+  <div class="flash yellow lighten-5 z-depth-3 scale-transition">
+    <div class="container">
+      <i class="material-icons left medium yellow-text text-darken-1">info</i>
+      <p><%= messages.info %></p>
+    </div>
+  </div>
+<% } %>
+
+<%if (messages.success) { %>
+  <div class="flash green lighten-5 z-depth-3 scale-transition">
+    <div class="container">
+      <i class="material-icons left medium green-text text-darken-1">check_circle</i>
+      <p><%= messages.success %></p>
+    </div>
+  </div>
+<% } %>
+
+<%if (messages.error) { %>
+  <div class="flash red lighten-5 z-depth-3 scale-transition">
+    <div class="container">
+      <i class="material-icons left medium red-text text-darken-1">warning</i>
+      <p><%= messages.error %></p>
+    </div>
+  </div>
+<% } %>

@@ -1,0 +1,56 @@
+<% layout('../layouts/html') -%>
+<% layout('../layouts/html') -%>
+<% script('https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.min.js') -%>
+<div class="row">
+  <form class="col s12 repeater" action="/products/edit" method="POST">
+    <input type="hidden" name="id" value="<%= item.id %>" />
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="material-icons prefix">info_outline</i>
+        <input id="name" placeholder="Intel i7-8700K" value="<%= item.name %>" type="text" class="validate" name="name" required/>
+        <label for="name">Product Name</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">label_outline</i>
+        <input id="category" placeholder="CPU, Motherboard, Etc." value="<%= item.category %>" type="text" class="validate" name="category" required />
+        <label for="category">Category</label>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">attach_money</i>
+        <input id="price" placeholder="99.99" type="number" value="<%= item.alert %>" class="validate" name="price" step="0.01" required />
+        <label for="price">Price Alert</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <a data-repeater-create class="waves-effect btn">Add Additional URL</a>
+      </div>
+    </div>
+    <div data-repeater-list="urls">
+      <% for(let i=0; i<item.urls.length; i++) {%>
+        <div class="row" data-repeater-item>
+          <div class="input-field col s11">
+            <i class="material-icons prefix">insert_link</i>
+            <input type="url" placeholder="https://amazon.com" value="<%= item.urls[i] %>" class="validate" name="href" required />
+            <label for="href">URL</label>
+          </div>
+          <div class="input-field col s1 center-align">
+            <a data-repeater-delete class="removeItem waves-effect waves-red btn-flat">
+              <i class="tiny material-icons">delete_forever</i>
+            </a>
+          </div>
+        </div>
+      <% } %>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button class="right btn waves-effect waves-light" type="submit">
+          <span>Edit Product</span>
+          <i class="material-icons right">create</i>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+# Project Files
+package-lock.json
+node_modules/
+db.json
+
+# OS Files
+*~
+.DS_Store
+._.*
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db
+
+# Common Project Files
+.cache
+.idea
+*.log
+*.map
+.vscode
+
+# Large/Disallowed File Types
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip

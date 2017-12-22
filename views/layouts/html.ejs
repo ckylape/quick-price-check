@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %> | Price Watch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/css/materialize.min.css">
+    <link rel='stylesheet' href="/assets/css/app.css" />
+    <%- stylesheets %>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title"><%= title %></h1>
+      <hr>
+      <% include flash %>
+      <div class="body-content">
+        <%- body -%>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+    <%- scripts %>
+    <script src="/assets/js/app.js"></script>
+  </body>
+</html>

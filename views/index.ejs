@@ -1,0 +1,50 @@
+<% layout('layouts/html') -%>
+<p>Here are the latest prices for your products. Add additional items below.</p>
+
+<table class="responsive-table highlight">
+  <thead>
+    <tr>
+        <th>Category</th>
+        <th>Item Name</th>
+        <th>Item Price</th>
+        <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(let i=0; i<products.length; i++) {%>
+     <tr>
+       <td><%= products[i].category %></td>
+       <td>
+         <% if(products[i].best.url != '') { %>
+         <a href="<%= products[i].best.url %>" target="_blank">
+           <%= products[i].name %>
+         </a>
+         <% } else { %>
+           <%= products[i].name %>
+         <% } %>
+       </td>
+       <td>
+        <% if(products[i].best.price != '99999999999.99') { %>
+          $ <%= products[i].best.price %>
+        <% } else { %>
+          N/A
+        <% } %>
+       </td>
+       <td>
+         <a href="/products/edit/<%= products[i].id %>" class="little waves-effect btn-flat">
+           <i class="tiny material-icons">edit</i>
+         </a>
+         <a href="/products/delete/<%= products[i].id %>" class="little waves-effect btn-flat">
+           <i class="tiny material-icons">delete_forever</i>
+         </a>
+       </td>
+     </tr>
+    <% } %>
+  </tbody>
+</table>
+
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large teal" href="/products/add">
+    <i class="large material-icons">add</i>
+  </a>
+</div>

@@ -1,0 +1,25 @@
+.page-title {
+  font-size: 3rem;
+}
+.flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  z-index: 100;
+}
+.flash p {
+  line-height: 4rem;
+  font-weight: bold;
+}
+.body-content {
+  padding-top: 1rem;
+}
+.little {
+  padding: 0 0.5rem;
+}
+.little i {
+  font-size: 1.3rem;
+  color: #444;
+}
