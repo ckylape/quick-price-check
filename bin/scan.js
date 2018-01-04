@@ -54,7 +54,7 @@ async function sendEmail(alerts) {
     const conf = await db.get('settings').value()
     const auth = {
         auth: {
-            api_key: conf.MailgunTo,
+            api_key: conf.MailgunKey,
             domain: conf.MailgunDomain
         }
     }

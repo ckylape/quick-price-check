@@ -1,8 +1,8 @@
 {
     "items": [],
     "settings": {
-        "MailgunKey": "",
-        "MailgunDomain": "",
-        "MailgunTo": ""
+        "MailgunKey": "key-abcdefghijklmnopqrstuvwxyz",
+        "MailgunDomain": "sandboxXXYYZZ.mailgun.org",
+        "MailgunTo": "email@example.com"
     }
 }
