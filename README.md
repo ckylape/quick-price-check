@@ -8,6 +8,8 @@ Quickly cross reference various prices on technology products and get alerts whe
 * [Newegg](https://www.newegg.com/)
 * [Micro Center](http://www.microcenter.com/)
 * [Tiger Direct](http://www.tigerdirect.com/)
+* [B&H](https://www.bhphotovideo.com/)
+* [Best Buy](https://www.bestbuy.com/)
 
 ## Settings & Setup
 
