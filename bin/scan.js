@@ -29,6 +29,18 @@ function scrape(content, hostname) {
         case 'www.amazon.com':
             price = $('#priceblock_ourprice').text()
             break
+        case 'www.bestbuy.com':
+            price = $('.pb-hero-price.pb-purchase-price').text()
+            break
+        case 'www.bhphotovideo.com':
+            var regex = /mainPrice = "(.*)";/g
+            var variables = $('script').filter(function () {
+                return ($(this).html().indexOf('mainPrice =') > -1)
+            })
+            var match = regex.exec(variables.text())
+            if (match)
+                price = match[1]
+            break
         case 'www.microcenter.com':
             var single = $('#pricing').text()
             if (single) {
@@ -61,7 +73,7 @@ async function sendEmail(alerts) {
     const email = new Email({
         message: {
             from: {
-                address: 'no-reply@locahost',
+                address: 'no-reply@example.com',
                 name: 'Price-Watch Update'
             }
         },
