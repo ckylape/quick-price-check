@@ -1,12 +1,12 @@
 $(function() {
   var $flash = $('.flash');
   var $repeater = $('.repeater');
-  if($flash) {
+  if($flash.length > 0) {
     setTimeout(function() {
       $flash.addClass('scale-out')
     }, 5000);
   }
-  if($repeater) {
+  if($repeater.length > 0) {
     $repeater.repeater({
       initEmpty: false,
       defaultValues: {
@@ -21,4 +21,5 @@ $(function() {
       isFirstItemUndeletable: true
     });
   }
+  $('.diff').tooltip();
 });
